@@ -1,0 +1,30 @@
+.cpt_options_fields div {
+    display: inline-block;
+    margin-right: 25px;
+}
+.so-panels-dialog-edit-widget label, .cpt_options_fields label, .compare_fields_data label, .cpt_post_taxonomy p {
+    margin-right: 15px;
+    margin-bottom: 9px;
+    display: inline-block;
+}
+.pods-cpt-post-wrapper {
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    background-color: #fff;
+}
+.pods-cpt-post-wrapper label:first-child{
+	font-weight: bold;
+}
+.cpt_options_fields {
+    margin: 10px 0;
+}
+label:empty, p:empty{
+    display: none;
+}
+.adv-search-cpt-fields .cpt_options_fields, .adv-search-cpt-fields .cpt_post_taxonomy{
+	display: block;
+}
+.cpt_post_taxonomy {
+    margin-top: -10px;
+}

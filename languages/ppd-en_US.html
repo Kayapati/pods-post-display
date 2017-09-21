@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cpt post view</title>
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+  <style>
+
+
+/*
+Based on Minimal CSS (minimalcss.com) under the MIT license.
+*/
+
+/* Reset */
+* { margin: 0; padding: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+/* Layout */
+body { background-color: #fff; color: #333;	font: 14px/20px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+header { width: 100%; margin: 0 auto; position: relative; padding: 20px 0; margin-bottom: 20px; }
+
+nav ul { margin: 0; }
+nav ul li { display: inline; margin-right: 20px; font-size: 16px; line-height: 28px; color: #333; }
+nav ul li a { color: #333; }
+
+.container { position: relative; max-width: 90%; margin: 0 auto; }
+
+footer { border-top:1px solid #ccc; font-size:11px; line-height:26px; color:#999; }
+footer a { color:#999999; }
+footer a:hover { color:#105CB6; }
+footer ul li { display:inline; list-style:none; padding-left:20px; }
+
+/* Typography */
+a { color: #105CB6; text-decoration: none; }
+a:hover, a:focus { color: #105CB6; text-decoration: underline; }
+a:active { color: #105CB6; }
+
+h1 { font-size: 24px; line-height: 20px; margin: 10px 0; }
+h2 { font-size: 20px; line-height: 20px; margin: 10px 0; }
+h3 { font-size: 16px; line-height: 20px; margin: 10px 0; }
+h4 { font-size: 14px; line-height: 20px; margin: 10px 0; }
+h5 { font-size: 12px; line-height: 20px; margin: 10px 0; }
+h5 { font-size: 10px; line-height: 20px; margin: 10px 0; }
+h1,h2,h3,h4,h5,h6 { color: #333; }
+
+p { margin-bottom: 10px; }
+
+.float-left     { float: left; }
+.float-right    { float: right; }
+img.float-left  { float: left; margin: 0 20px 20px 0; }
+img.float-right { float: right; margin: 0 0 20px 20px; }
+img.center      { margin: 0 auto; display: block; }
+
+.text-left    { text-align: left; }
+.text-center  { text-align: center; }
+.text-right   { text-align: right; }
+.text-justify { text-align: justify; }
+
+/* Misc */
+hr { background-color: #ccc; border: 0px; color: #ccc; height: 1px; margin: 8px 0 20px 0; }
+pre, code { background:#E0ECF6; display:block; margin-bottom: 20px; padding:10px; }
+
+blockquote { margin: 10px 10px 20px; padding: 9px; background-color: #f8f8f8; color: #666; border-left: 5px solid #ddd; font: 14px/20px Georgia, Times, serif; quotes: "\201C" "\201D"; }
+blockquote p { margin: 0; }
+blockquote:before { content: open-quote; font-weight: bold; }
+blockquote:after  { content: close-quote; font-weight: bold; }
+
+/* List */
+ul { list-style-position:inside; }
+ol { list-style-position:inside; }
+
+/* Table */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+th { font-weight: bold; }
+tfoot { font-style: italic; }
+
+/* Metadata part */
+
+.metadata {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 90%;
+}
+table.metadata td {
+  padding-right: 20px;
+}
+
+.stats {
+  padding-top: 5px;
+  padding-bottom: 20px;
+}
+.graph {
+  width: 100%;
+}
+.graph div { float: left; }
+.graph div:first-child { border-top-left-radius: 3px; border-bottom-left-radius: 3px; }
+.graph div:last-child { border-top-right-radius: 3px; border-bottom-right-radius: 3px; }
+.percent-done    { background-color: #71DD46; height: 10px; }
+.percent-fuzzy   { background-color: #FFD300; height: 10px; }
+.percent-untrans { background-color: #F1F1F1; height: 10px; }
+.legend {
+  font-size: smaller;
+  color: #aaa;
+  padding-top: 12px;
+  text-align: center;
+}
+
+/* Translations */
+table.translations {
+  width: 100%;
+  table-layout: fixed;
+}
+table.translations th, table.translations td {
+  padding: 5px 10px;
+  vertical-align: top;
+  border-bottom: 1px solid #E1E1E1;
+}
+table.translations th {
+  text-align: left;
+}
+table.translations th:first-child, table.translations td:first-child { padding-left: 0; }
+table.translations th:last-child, table.translations td:last-child { padding-right: 0; }
+
+.with-comments td {
+  border-bottom: none !important;
+}
+tr.comments div {
+  float: right;
+  max-width: 75%;
+  font-size: smaller;
+  color: #aaa;
+}
+tr.comments div p:last-child { margin-bottom: 0; }
+
+.fuzzy .tra {
+  color: #a9861b;
+}
+
+.msgctxt {
+  font-size: smaller;
+  color: #6d8e13;
+}
+
+
+  </style>
+</head>
+<body>
+<div class='container'>
+<table class='metadata'>
+<tr><td>Project:</td><td>Cpt post view</td></tr>
+<tr><td>Language:</td><td>English (United States)</td></tr>
+</table>
+<div class='stats'>
+  <div class='graph'>
+    <div class='percent-untrans' style='width: 100%'>&nbsp;</div>
+  </div>
+  <div class='legend'>Translated: 0 of 92 (0 %)  •  Remaining: 92  </div>
+</div>
+<table class='translations'>
+  <thead>
+    <tr>
+      <th>Source text — English</th>
+      <th>Translation — English (United States)</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Pods - CPT Post Front End list View, Edit &amp; Delete Form</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Use this widget to add  cpt post Front End as list view, edit and delete pods post</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Save Changes</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Your post has been deleted</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Form Updated successfully</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+You Don't Have Permissions to create post</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Please Login</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Enter Post Title (required)</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Featured Image</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Title</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Category</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Date</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Post Image</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Action</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Status</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+No terms</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Published</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Pending</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Nothing found</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Form submitted successfully</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+CPT Post Types</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Form Submit Button Text</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Post Delete Message</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Form Update Message</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Export</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Import</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+When you click &lt;tt&gt;Dowload Pod CPT Views Settings&lt;/tt&gt; button, system will generate a JSON file for you to save on your computer.</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Import Pods CPT Options</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+All options are restored successfully</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Invalid file or file size too big.</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Click Browse button and choose a json file that you backup before.</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Press Upload File and Import, WordPress do the rest for you.</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Upload File and Import</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Search Results :</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Nothing Found</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Pods Post Display</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+CPT Fields</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Taxonomy</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Options Settings</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Enable </td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Taxonomy Columns</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Choose Image Size</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+ Wordpress Default Image Sizes</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Custom Image Sizes</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Wordpress Default Image Sizes</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Images Custom Width &amp; Height</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Limit</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Pods advanced search filter</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Use this widget to create simple and advanced search filters.</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Select</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Search</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Select Talent</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+CPT Post Type</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+CPT  Taxonomies</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Enable Select Fields Compare Settings</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Enable Ajax Search</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Add class name for display ajax searh results data</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Change 'Select Talent' Text</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Search Button Text</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Pods - Frontend posting form</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Use this widget to add  frontend form for posting.</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Your limit has been exceeded</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Submit</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Form Success Message</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Non User Role Form Accessing Message</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Pods - Frontend posts list view</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Use this widget to add  cpt posts in Front End as a list view.</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Pods - Post Grid View</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Use this widget to add  cpt posts as a grid view</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+ALL</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Filter Tabs</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Filter Tab ALL Button Text Change</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Filter Tab BG Color</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Filter Tab Text Color</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Filter Tab Acive BG Color</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Filter Tab Active Text Color</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Columns</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Order By</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Order</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Wordpress Post Thumbnails  Default / Custom Sizes</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Custom Thumb Sizes</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Width (px)</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Height (px)</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Post Content Limit</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Disable post Thumbnail</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Disable post Content</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Enable Gray Scale Images</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Display Number Of Postes</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Disable Pagination</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Pods - Post Slider</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Use this widget to add  cpt posts as a slider view</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+<tr class='i untrans'>
+<td class='src'  lang='en'>
+Disable post Title</td>
+<td class='tra'  lang='en-US'>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>
