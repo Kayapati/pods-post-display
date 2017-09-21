@@ -38,7 +38,8 @@ if( !class_exists('Kaya_Pods_Post_Display') ){
 			require_once plugin_dir_path( __FILE__ ) . 'widgets/pod-cpt-front-end-view-edit-forms.php';
 			require_once plugin_dir_path( __FILE__ ) . 'widgets/advanced_search.php';
 			require_once plugin_dir_path( __FILE__ ) . 'includes/mr-image-resize.php';
-			require_once plugin_dir_path( __FILE__ ) . 'includes/search.php';  
+			require_once plugin_dir_path( __FILE__ ) . 'includes/search.php'; 			
+			require_once plugin_dir_path( __FILE__ ) . 'includes/automatic-updater.php';  
 		}
 		/**
 		 * Loading Front End Css & Js Files
