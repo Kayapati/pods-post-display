@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 require_once( 'includes/automatic-updater.php' );
 if ( is_admin() ) {
-    new WPFDGitHubPluginUpdater( __FILE__, 'Kayapati', "pods-post-display", '18d1d2beed69dc6988a784450ce32bee131fb20a' );
+    new WPFDGitHubPluginUpdater( __FILE__, 'Kayapati', "pods-post-display", '880b34a990772677e73f09769d74dfbbe586ad3f' );
 }
 
 
