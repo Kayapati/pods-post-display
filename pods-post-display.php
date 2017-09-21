@@ -3,7 +3,7 @@
  * Plugin Name:Pods Post Display
  * Plugin URI: http://themeforest.net/user/kayapati
  * Description: Pods Add-on allow you to display posts custom fields data and Taxonomy layout styles like number of column, thumbnail sizes and number of posts to display.
- * Version: 1.0.4
+ * Version: 1.0.5
  * Author: Venisha IT Team
  * Author URI: http://themeforest.net/user/kayapati
  * Text Domain: ppd
