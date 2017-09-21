@@ -15,13 +15,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
 * Main PODs CPT Views Classes
 */
-//require_once plugin_dir_path( __FILE__ ) . 'includes/automatic-updater.php';  
-//new WPFDGitHubPluginUpdater(__FILE__,'Kayapati', 'pods-post-display', '18d1d2beed69dc6988a784450ce32bee131fb20a');
+require_once plugin_dir_path( __FILE__ ) . 'includes/automatic-updater.php';  
+new WPFDGitHubPluginUpdater(__FILE__,'Kayapati', 'pods-post-display', '880b34a990772677e73f09769d74dfbbe586ad3f');
 
-require_once( 'includes/automatic-updater.php' );
-if ( is_admin() ) {
-    new WPFDGitHubPluginUpdater( __FILE__, 'Kayapati', "pods-post-display", '880b34a990772677e73f09769d74dfbbe586ad3f' );
-}
+//require_once( 'includes/automatic-updater.php' );
+//if ( is_admin() ) {
+   // new WPFDGitHubPluginUpdater( __FILE__, 'Kayapati', 'pods-post-display', '880b34a990772677e73f09769d74dfbbe586ad3f');
+//}
 
 
 if( !class_exists('Kaya_Pods_Post_Display') ){
