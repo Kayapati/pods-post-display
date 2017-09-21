@@ -18,10 +18,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 //require_once plugin_dir_path( __FILE__ ) . 'includes/automatic-updater.php';  
 //new WPFDGitHubPluginUpdater(__FILE__,'Kayapati', 'pods-post-display', '582e67b4f8cdc6cc6820304e6ff1323316627ea1');
 
-require_once( 'includes/automatic-updater.php' );
-if ( is_admin() ) {
-   new WPFDGitHubPluginUpdater( __FILE__, 'kayapati', "pods-post-display");
-}
+//require_once( 'includes/automatic-updater.php' );
+//if ( is_admin() ) {
+  // new WPFDGitHubPluginUpdater( __FILE__, 'kayapati', "pods-post-display");
+//}
+require_once(dirname(__FILE__) . "/includes/class.wp-auto-plugin-update.php");
 
 
 if( !class_exists('Kaya_Pods_Post_Display') ){
