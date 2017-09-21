@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 * Main PODs CPT Views Classes
 */
 require_once plugin_dir_path( __FILE__ ) . 'includes/automatic-updater.php';  
-new WPFDGitHubPluginUpdater(__FILE__,'Kayapati', 'pods-post-display', '880b34a990772677e73f09769d74dfbbe586ad3f');
+new WPFDGitHubPluginUpdater(__FILE__,'Kayapati', 'pods-post-display');
 
 //require_once( 'includes/automatic-updater.php' );
 //if ( is_admin() ) {
